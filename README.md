@@ -7,8 +7,7 @@ structured-subset DP-FY objective for multi-positive recommendation. Here
 The method scores the full item catalog, samples a set of distinct positive
 items for each user, and defines a Gibbs distribution over complete subsets
 of a fixed cardinality. Its partition function is evaluated exactly by a
-differentiable dynamic program. No perturbation, Monte Carlo estimator, soft
-Top-K relaxation, or straight-through estimator is used.
+differentiable dynamic program.
 
 ## Structured objective
 

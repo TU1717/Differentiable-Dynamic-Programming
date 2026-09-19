@@ -50,17 +50,14 @@ $$
 V[i,k] = \tau\log\!\left(\exp\!\left(\frac{V[i-1,k]}{\tau}\right) + \exp\!\left(\frac{V[i-1,k-1]+s_i}{\tau}\right)\right).
 $$
 
-The boundary conditions are $V[0,0]=0$ and negative infinity for invalid
-states. The desired surplus is $V[M,P]$. The implementation in
-`losses/dp_fy.py` evaluates the same recurrence with `logcumsumexp`, requiring
-$\mathcal{O}(MP)$ operations per score row rather than enumerating all
-$\binom{M}{P}$ subsets.
+The boundary conditions are \(V[0,0]=0\) and negative infinity for invalid states. The desired surplus is \(V[M,P]\).
 
-Differentiating the final DP state gives the exact item inclusion marginals.
-Consequently, the score gradient is
+The implementation in `losses/dp_fy.py` evaluates the same recurrence using `logcumsumexp`, requiring \(O(MP)\) operations per score row rather than explicitly enumerating all possible subsets.
+
+Differentiating the final DP state gives the exact item inclusion marginals. Consequently, the score gradient is
 
 $$
-\nabla_{\mathbf{s}}\mathcal{L}_{P,\tau}(\mathbf{s},\mathbf{y}) = \mathbf{p}_{P,\tau}(\mathbf{s}) - \mathbf{y}.
+\nabla_s L_{P,\tau}(s,y)=p_{P,\tau}(s)-y.
 $$
 
 The loss is smooth and convex in the score vector. 

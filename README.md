@@ -15,11 +15,9 @@ For a catalog of $M$ items, the feasible set of $P$-hot choices is
 
 $$
 \mathcal{C}_P =
-\left\{
-\mathbf{c}\in\{0,1\}^{M}
-\mid
-\mathbf{1}^{\top}\mathbf{c}=P
-\right\}.
+\{\mathbf{c}\in\{0,1\}^{M}
+\;|\;
+\mathbf{1}^{\top}\mathbf{c}=P\}.
 $$
 
 For scores $\mathbf{s}$ and temperature $\tau$, the model defines the subset

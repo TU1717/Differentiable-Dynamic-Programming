@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "seeds": [2024, 2025, 2026, 2027, 2028],
+    "device": "cuda",
+    "epochs": 300,
+    "eval_every": 5,
+    "patience": 12,
+    "train_batch": 512,
+    "eval_batch": 512,
+    "cutoffs": [5, 10, 20],
+    "lr": 0.01,
+    "weight_decay": 0.0,
+    "gradient_clip": 10.0,
+    "dim": 64,
+    "p": 5,
+    "temperature": 0.1
+  }
+}

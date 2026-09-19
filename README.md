@@ -65,9 +65,7 @@ $$
 \nabla_{\mathbf{s}}\mathcal{L}_{P,\tau}(\mathbf{s},\mathbf{y}) = \mathbf{p}_{P,\tau}(\mathbf{s}) - \mathbf{y}.
 $$
 
-The loss is smooth and convex in the score vector. It is invariant to adding
-the same constant to every item score, so strict convexity is understood only
-after removing this constant-shift direction.
+The loss is smooth and convex in the score vector. 
 
 ## Effective cardinality
 

@@ -159,13 +159,6 @@ python main.py \
   --device cpu
 ```
 
-## Evaluation
-
-Training interactions are masked before full-catalog ranking. Checkpoints are
-selected by validation NDCG@5, and the test split is evaluated once after the
-checkpoint is frozen. Multiple-seed runs write per-seed results together with
-the mean and sample standard deviation.
-
 ## Tests
 
 ```bash

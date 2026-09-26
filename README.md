@@ -62,17 +62,6 @@ $$
 
 The loss is smooth and convex in the score vector. 
 
-## Effective cardinality
-
-Users can have different numbers of observed positives. For nominal budget
-$P$, training uses
-
-$$
-P_u = \min\!\left(P,\left|\mathcal{I}^{+}_{u}\right|\right).
-$$
-
-Each update samples $P_u$ distinct positives without replacement. Users with
-the same effective cardinality are grouped before the DP loss is evaluated.
 
 ## Code
 
